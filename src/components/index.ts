@@ -1,2 +1,5 @@
-export { default as Table, type TableProps } from "./Table";
-export { default as Button, type ButtonProps } from "./Button";
+export { default as Table } from "./Table";
+export type { TableProps } from "./Table";
+
+export { default as Button } from "./Button";
+export type { ButtonProps } from "./Button";

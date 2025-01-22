@@ -1,0 +1,28 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+.App {
+  font-family: Roboto, serif;
+}
+
+p {
+  line-height: 1.5;
+}
+
+ol {
+  padding-inline-start: 16px;
+}
+
+ol > li {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.box {
+  border: 1px solid #cccccc;
+  padding: 16px;
+  margin-bottom: 10px;
+
+  & > div {
+    padding: 0 25px;
+  }
+}

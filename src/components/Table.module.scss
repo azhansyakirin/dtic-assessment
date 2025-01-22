@@ -1,0 +1,87 @@
+.tbl {
+    border: 1px solid #cccccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-width: 270px;
+    table-layout: auto;
+    margin-bottom: 16px;
+
+    caption {
+        font-size: 1.5em;
+        margin: 16px 8px;
+    }
+
+    tr,
+    td {
+        padding: 0.625em;
+    }
+
+    .truncate {
+        width: 125px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    th {
+        font-size: 0.85em;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        text-align: left;
+        padding: 0.625em;
+    }
+
+    td img {
+        border-radius: 50%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .tbl {
+        border: 0;
+
+        caption {
+            font-size: 1.3em;
+        }
+
+        thead {
+            border: 0;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+
+        tr {
+            border-bottom: 3px solid #dddddd;
+            display: block;
+            margin-bottom: 0.625em;
+        }
+
+        td {
+            border-bottom: 1px solid #dddddd;
+            display: block;
+            font-size: 0.8em;
+            text-align: right;
+
+            &:before {
+                content: attr(data-label);
+                float: left;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+
+        .truncate {
+            width: 100%;
+        }
+    }
+}
